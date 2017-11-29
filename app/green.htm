@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script src="hello.js"></script>
+	      <style>
+            .ng-valid.ng-dirty{
+                border-color: green;
+            }
+            .ng-invalid.ng-dirty{
+                border-color: red;
+            }
+            
+         </style>
+</head>
+
+<body ng-app="myApp" ng-controller="formCtrl">
+	<div class="container">
+		<div class="col-md-6 col-md-offset-3">
+
+
+	<div id="cen"class="page-header">
+		<h1 align="center"><span class="glyphicon glyphicon-tower"></span> Add the Company</h1>
+		</div>
+
+			<form ng-submit="processForm()">
+	
+					<div id="superhero-group" class="form-group">
+							<input type="text" name="id" class="form-control" placeholder="Company ID" ng-model="formData.id" required>
+					</div>	
+	
+					<div id="name-group" class="form-group">
+						
+							<input type="text" name="name" class="form-control" placeholder="Company Name" ng-model="formData.name" required>
+               </div>
+
+					<div id="superhero-group" class="form-group">
+							<input type="text" name="address" class="form-control" placeholder="Company Address" ng-model="formData.address" required>
+					</div>
+		
+					<div id="superhero-group" class="form-group">
+							<input type="text" name="city" class="form-control" placeholder="City" ng-model="formData.city" required>
+					</div>
+					
+					<div id="superhero-group" class="form-group">
+							<input type="text" name="country" class="form-control" placeholder="Country" ng-model="formData.country" required>
+					</div>
+					
+					<div id="superhero-group" class="form-group">
+							<input type="text" name="telephone" class="form-control" placeholder="Telephone(optional)" ng-model="formData.telephone">
+					</div>
+					
+					<div id="superhero-group" class="form-group">
+							<input type="text" name="directors" class="form-control" placeholder="Directors" ng-model="formData.directors" required>
+					</div>
+					
+					<div id="superhero-group" class="form-group">
+							<input type="email" name="email" class="form-control" placeholder="E-mail(optional)" ng-model="formData.email">
+					</div>
+
+					<button type="submit" class="btn btn-success btn-lg btn-block">
+						<span class="glyphicon glyphicon-flash"></span> Submit!
+					</button>
+	</form>
+
+	<!-- SHOW DATA FROM INPUTS AS THEY ARE BEING TYPED -->
+					<pre><p>Here you can see the JSON form</p>
+		{{ formData }}
+					</pre>
+
+		</div>
+	</div>
+</body>
+</html>
