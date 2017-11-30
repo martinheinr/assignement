@@ -1,7 +1,7 @@
 var app = angular.module('myApp', ["ngRoute"]);
 app.controller('customersCtrl', function($scope, $http) {
 	  $scope.company=[];
-	  $http.get("http://localhost:4567/api/v1/companies")
+	  $http.get("https://thawing-ridge-85057.herokuapp.com/api/v1/companies")
     .then(function(response) {
     	$scope.company = response.data;
     	
@@ -54,7 +54,7 @@ app.controller('formCtrl', function($scope, $http) {
 			$scope.processForm = function() {
 				$http({
 			        method  : 'POST',
-			        url     : 'http://localhost:4567/api/v1/companies',
+			        url     : 'https://thawing-ridge-85057.herokuapp.com/api/v1/companies',
 			        data    : $scope.formData,  // pass in data as strings
 			        headers : { 'Content-Type': 'application/x-www-form-urlencoded'}
 			    })
